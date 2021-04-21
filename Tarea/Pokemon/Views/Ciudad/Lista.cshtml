@@ -1,0 +1,16 @@
+@model List<Ciudad>
+<h1>Lista de ciudades registradas</h1>
+
+@if (Model.Count == 0) {
+    <div class="alert alert-warning text-center">No hay ciudades registradas</div>
+}
+else{
+    <ol>
+        @foreach (var c in Model){
+            <div>
+                <div>@c.Nombre</div>
+                <div>@c.Lider</div>
+            </div>
+        }
+    </ol>
+}
